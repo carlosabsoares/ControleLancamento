@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ControleLancamento.Api.Api.DependencyMap
 {
