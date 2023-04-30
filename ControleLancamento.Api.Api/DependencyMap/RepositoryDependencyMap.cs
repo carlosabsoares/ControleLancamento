@@ -7,6 +7,7 @@ namespace ControleLancamento.Api.Api.DependencyMap
     {
         public static void RepositoryMap(this IServiceCollection services)
         {
+            services.AddScoped<ILancamentoRepository, LancamentoRepository>();
         }
     }
 }

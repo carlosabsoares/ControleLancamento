@@ -1,13 +1,11 @@
 ﻿using ControleLancamento.Api.Api.DependencyMap;
 using ControleLancamento.Api.Infra.Context;
-using DocumentFormat.OpenXml.Wordprocessing;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace ControleLancamento.Api.Api
 {
@@ -32,7 +30,7 @@ namespace ControleLancamento.Api.Api
 
             services.AddCors();
             services.AddControllers();
-                        
+
             var key = new HMACSHA256().Key;
 
             services.AddAuthentication(x =>

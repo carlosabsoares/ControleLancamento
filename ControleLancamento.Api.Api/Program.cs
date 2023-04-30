@@ -1,7 +1,3 @@
-using ControleLancamento.Api.Api;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-
 namespace ControleLancamento.Api.Api
 {
     public class Program

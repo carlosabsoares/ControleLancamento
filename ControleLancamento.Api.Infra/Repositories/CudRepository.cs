@@ -1,16 +1,10 @@
 ﻿using ControleLancamento.Api.Domain.Repositories;
 using ControleLancamento.Api.Infra.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleLancamento.Api.Infra.Repositories
 {
     public class CudRepository : ICudRepository
     {
-
         private readonly DataContext _context;
 
         public CudRepository(DataContext context)
@@ -33,10 +27,8 @@ namespace ControleLancamento.Api.Infra.Repositories
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-
         }
 
         public async Task<bool> Delete<T>(T entity) where T : class
@@ -65,10 +57,8 @@ namespace ControleLancamento.Api.Infra.Repositories
 
             try
             {
-
                 await _context.Database.BeginTransactionAsync();
                 _return = true;
-
             }
             catch (Exception)
             {
@@ -76,7 +66,6 @@ namespace ControleLancamento.Api.Infra.Repositories
             }
 
             return _return;
-
         }
 
         public async Task<bool> CommitTransactionAsync()
@@ -85,10 +74,8 @@ namespace ControleLancamento.Api.Infra.Repositories
 
             try
             {
-
                 await _context.Database.CommitTransactionAsync();
                 _return = true;
-
             }
             catch (Exception)
             {
@@ -96,7 +83,6 @@ namespace ControleLancamento.Api.Infra.Repositories
             }
 
             return _return;
-
         }
 
         public async Task<bool> RollbackTransactionAsync()
@@ -105,10 +91,8 @@ namespace ControleLancamento.Api.Infra.Repositories
 
             try
             {
-
                 await _context.Database.RollbackTransactionAsync();
                 _return = true;
-
             }
             catch (Exception)
             {
@@ -116,7 +100,6 @@ namespace ControleLancamento.Api.Infra.Repositories
             }
 
             return _return;
-
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using Flunt.Validations;
-using ControleLancamento.Api.Application.Configuration.Events;
+﻿using ControleLancamento.Api.Application.Configuration.Events;
+using Flunt.Validations;
 using MediatR;
 
 namespace ControleLancamento.Api.Application.Configuration.Queries

@@ -5,7 +5,6 @@ namespace ControleLancamento.Api.XUnitTest
         [Fact]
         public void Test1()
         {
-
         }
     }
 }

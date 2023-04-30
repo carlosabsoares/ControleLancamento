@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ControleLancamento.Api.Domain.Repositories
+﻿namespace ControleLancamento.Api.Domain.Repositories
 {
     public interface ICudRepository
     {
