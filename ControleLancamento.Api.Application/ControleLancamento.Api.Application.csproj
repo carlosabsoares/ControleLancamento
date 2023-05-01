@@ -21,9 +21,6 @@
 	
   <ItemGroup>
     <Folder Include="AppLancamento\GetByIdLancamento\" />
-    <Folder Include="AppLancamento\DeleteLancamento\" />
-    <Folder Include="AppLancamento\PutLancamento\" />
-    <Folder Include="AppLancamento\PostLancamento\" />
   </ItemGroup>
 
 </Project>

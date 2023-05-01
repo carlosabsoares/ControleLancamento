@@ -33,7 +33,7 @@ namespace ControleLancamento.Api.Infra.Repositories
 
         public async Task<bool> Delete<T>(T entity) where T : class
         {
-            _context.Update(entity);
+            _context.Remove(entity);
             return (await _context.SaveChangesAsync()) > 0;
         }
 
