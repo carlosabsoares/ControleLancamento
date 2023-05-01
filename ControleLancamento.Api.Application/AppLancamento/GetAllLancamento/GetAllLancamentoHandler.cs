@@ -19,7 +19,7 @@ namespace ControleLancamento.Api.Application.AppLancamento
 
         public async Task<IEvent> Handle(GetAllLancamentoQuery request, CancellationToken cancellationToken)
         {
-            var result = (await _repoLancamento.FindAll()).OrderByDescending(x=> x.DataCriacao);
+            var result = (await _repoLancamento.FindAll()).OrderByDescending(x => x.DataCriacao);
 
             if (result.Any())
             {

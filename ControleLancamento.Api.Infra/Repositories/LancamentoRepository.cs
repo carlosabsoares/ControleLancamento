@@ -2,7 +2,6 @@
 using ControleLancamento.Api.Domain.Repositories;
 using ControleLancamento.Api.Infra.Context;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ControleLancamento.Api.Infra.Repositories
 {
@@ -19,7 +18,6 @@ namespace ControleLancamento.Api.Infra.Repositories
         {
             return await _context.Lancamentos.AsNoTracking().ToListAsync();
         }
-
 
         public async Task<LancamentoEntity> FindById(Guid id)
         {
