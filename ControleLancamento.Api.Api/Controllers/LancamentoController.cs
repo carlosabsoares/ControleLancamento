@@ -33,6 +33,8 @@ namespace ControleLancamento.Api.Api.Controllers
             return new OkObjectResult(result.Data);
         }
 
+
+
         /// <summary>Cadastra Lancamento</summary>
         /// <returns>Cadastra Lancamento</returns>
         [HttpPost()]
@@ -50,6 +52,7 @@ namespace ControleLancamento.Api.Api.Controllers
             }
             return new OkObjectResult(result.Data);
         }
+
 
         /// <summary>Captura todos os Lancamento</summary>
         /// <returns>Captura todos os Lancamento</returns>

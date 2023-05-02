@@ -44,7 +44,7 @@ namespace ControleLancamento.Api.Application.AppLancamento
 
             var _lancamento = new LancamentoEntity()
             {
-                Id = Guid.NewGuid(),
+                Id = request.Id,
                 DataCriacao = request.Data,
                 TipoOperacao = request.TipoOperacao,
                 Valor = request.Valor,

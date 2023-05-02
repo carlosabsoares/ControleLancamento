@@ -23,10 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Back.Test\src\ControleLancamento.Api.Api.Test\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\ControleLancamento.Api.Api\ControleLancamento.Api.Api.csproj" />
     <ProjectReference Include="..\ControleLancamento.Api.Application\ControleLancamento.Api.Application.csproj" />
     <ProjectReference Include="..\ControleLancamento.Api.Domain\ControleLancamento.Api.Domain.csproj" />
   </ItemGroup>
