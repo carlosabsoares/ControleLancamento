@@ -18,9 +18,5 @@
     <ProjectReference Include="..\ControleLancamento.Api.Domain\ControleLancamento.Api.Domain.csproj" />
     <ProjectReference Include="..\ControleLancamento.Api.Shared\ControleLancamento.Api.Shared.csproj" />
   </ItemGroup>
-	
-  <ItemGroup>
-    <Folder Include="AppLancamento\GetByIdLancamento\" />
-  </ItemGroup>
 
 </Project>
