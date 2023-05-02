@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back", "Back", "{1B1BB4B5-F9FD-4D83-B1AF-6328E5FDA8DF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Front", "Front", "{178DF78B-6670-4D9A-9EB3-C37F4EB96B5A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EA5CA5C3-9B1E-4B11-81DB-C2EF680B3AD6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleLancamento.Api.Api", "ControleLancamento.Api.Api\ControleLancamento.Api.Api.csproj", "{7C5D5FB8-0B99-435A-BB9D-B818070D5652}"
@@ -20,10 +18,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleLancamento.Api.Shared", "ControleLancamento.Api.Shared\ControleLancamento.Api.Shared.csproj", "{87B7BC84-5EEB-4A08-9A9C-B9EBB0F22733}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleLancamento.Api.XUnitTest", "ControleLancamento.Api.XUnitTest\ControleLancamento.Api.XUnitTest.csproj", "{27720A30-1403-4EC3-BAE3-75EEC018197E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{479407B5-45EA-40E7-B188-64160FEA84CA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleLancamento.Front", "ControleLancamento.Front\ControleLancamento.Front.csproj", "{AF44AD11-3170-401C-84F8-4498D2F5F7FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +49,6 @@ Global
 		{27720A30-1403-4EC3-BAE3-75EEC018197E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27720A30-1403-4EC3-BAE3-75EEC018197E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27720A30-1403-4EC3-BAE3-75EEC018197E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF44AD11-3170-401C-84F8-4498D2F5F7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF44AD11-3170-401C-84F8-4498D2F5F7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF44AD11-3170-401C-84F8-4498D2F5F7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF44AD11-3170-401C-84F8-4498D2F5F7FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,8 +61,6 @@ Global
 		{FE142AF3-F1F9-47EF-9E07-5F0D1605A041} = {EA5CA5C3-9B1E-4B11-81DB-C2EF680B3AD6}
 		{87B7BC84-5EEB-4A08-9A9C-B9EBB0F22733} = {EA5CA5C3-9B1E-4B11-81DB-C2EF680B3AD6}
 		{27720A30-1403-4EC3-BAE3-75EEC018197E} = {EA5CA5C3-9B1E-4B11-81DB-C2EF680B3AD6}
-		{479407B5-45EA-40E7-B188-64160FEA84CA} = {178DF78B-6670-4D9A-9EB3-C37F4EB96B5A}
-		{AF44AD11-3170-401C-84F8-4498D2F5F7FA} = {479407B5-45EA-40E7-B188-64160FEA84CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D9691E5-E899-45DF-88F0-57F9FFAB07AE}
