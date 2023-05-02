@@ -2,11 +2,6 @@
 using ControleLancamento.Api.Shared.Extension;
 using Flunt.Notifications;
 using Flunt.Validations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleLancamento.Api.Application.AppLancamento
 {

@@ -2,11 +2,6 @@
 using ControleLancamento.Api.Domain.Enum;
 using Flunt.Notifications;
 using Flunt.Validations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleLancamento.Api.Application.AppLancamento
 {
@@ -21,6 +16,7 @@ namespace ControleLancamento.Api.Application.AppLancamento
                 new Contract()
                     .Requires()
                     .IsNullOrNullable(Valor, "Valor", "O valor é obrigatório")
+                    .IsFalse(Valor == 0 , "Valor", "O valor deve ser maior que zero")
                     .IsTrue(ValidaTipoOperacao(TipoOperacao), "Tipo Operacao", "O tipo de operacao é inválido.")
             );
         }
@@ -28,7 +24,6 @@ namespace ControleLancamento.Api.Application.AppLancamento
         private bool ValidaTipoOperacao(EnTipoOperacao tipoOperacao)
         {
             bool _return = false;
-
 
             if ((int)tipoOperacao >= Enum.GetValues(typeof(EnTipoOperacao)).Cast<int>().Min() &&
                (int)tipoOperacao <= Enum.GetValues(typeof(EnTipoOperacao)).Cast<int>().Max())

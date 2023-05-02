@@ -4,11 +4,6 @@ using ControleLancamento.Api.Domain.Entities;
 using ControleLancamento.Api.Domain.Enum;
 using ControleLancamento.Api.Domain.Repositories;
 using Flunt.Notifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleLancamento.Api.Application.AppLancamento
 {
@@ -34,7 +29,7 @@ namespace ControleLancamento.Api.Application.AppLancamento
 
             if (_ultimoResgistro.Any())
             {
-                _saldoAnterior = _ultimoResgistro.OrderByDescending(x=> x.DataCriacao).FirstOrDefault().SaldoFinal;
+                _saldoAnterior = _ultimoResgistro.OrderByDescending(x => x.DataCriacao).FirstOrDefault().SaldoFinal;
             }
 
             if (EnTipoOperacao.Debito.Equals(request.TipoOperacao) &&

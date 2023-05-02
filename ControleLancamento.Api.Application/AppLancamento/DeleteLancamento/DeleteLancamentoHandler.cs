@@ -5,17 +5,11 @@ using ControleLancamento.Api.Domain.Entities;
 using ControleLancamento.Api.Domain.Enum;
 using ControleLancamento.Api.Domain.Repositories;
 using Flunt.Notifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleLancamento.Api.Application.AppLancamento
 {
     public class DeleteLancamentoHandler : Notifiable, ICommandHandler<DeleteLancamentoCommand>
     {
-
         private readonly ILancamentoRepository _repoLancamento;
         private readonly IMapper _mapper;
         private readonly CancellationToken cancellationToken = new CancellationToken(true);
@@ -32,15 +26,19 @@ namespace ControleLancamento.Api.Application.AppLancamento
             if (request.Invalid)
                 return new ResultEvent(false, request.Notifications);
 
-            var _lancamentoRepo = (await _repoLancamento.FindAll()).OrderByDescending(x=> x.DataCriacao).ToList();
+            var _lancamentoRepo = (await _repoLancamento.FindAll()).OrderByDescending(x => x.DataCriacao).ToList();
 
-            int? indexIdDelete = _lancamentoRepo.FindIndex(x=> x.Id.Equals(request.Id));
+            int? indexIdDelete = _lancamentoRepo.FindIndex(x => x.Id.Equals(request.Id));
             int indexIdAtualizar = 0;
             decimal valorSaldoFinal = 0;
+            bool _result = false;
 
             LancamentoEntity registroDeletar = _lancamentoRepo.FirstOrDefault(x => x.Id.Equals(request.Id));
 
-            if(indexIdDelete != null && indexIdDelete > 0)
+            if(registroDeletar == null)
+                return new ResultEvent(false, "Registro não localizado.");
+
+            if (indexIdDelete != null && indexIdDelete > 0)
             {
                 indexIdAtualizar = indexIdDelete.Value - 1;
             }
@@ -56,13 +54,17 @@ namespace ControleLancamento.Api.Application.AppLancamento
 
             await _repoLancamento.BeginTransactionAsync();
 
-            var resultDelete = await _repoLancamento.Delete(registroDeletar);
-            var resultUpdate = await _repoLancamento.Update(registroAtualizar);
+            _result = await _repoLancamento.Delete(registroDeletar);
+
+            if(indexIdDelete != null && indexIdDelete != 0)
+            {
+                _result = await _repoLancamento.Update(registroAtualizar);
+            }
+            
 
             await _repoLancamento.CommitTransactionAsync();
 
-            //return new ResultEvent(true, resultUpdate ? resultUpdate : null);
-            return new ResultEvent(true, null);
+            return new ResultEvent(true, _result);
         }
     }
 }

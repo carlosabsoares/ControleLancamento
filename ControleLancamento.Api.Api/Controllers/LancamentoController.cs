@@ -1,5 +1,4 @@
-﻿using ControleLancamento.Api.Application;
-using ControleLancamento.Api.Application.AppLancamento;
+﻿using ControleLancamento.Api.Application.AppLancamento;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
